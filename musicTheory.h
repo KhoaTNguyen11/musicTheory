@@ -25,6 +25,8 @@ class musicTheory{
 		int interval_calc(string note_low, string note_high);
 		
 		vector<string> gen_maj_triad(string tonic);
+
+		vector<string> gen_min_triad(string tonic);
 		
 		
 	private:

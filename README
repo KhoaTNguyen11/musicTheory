@@ -24,6 +24,9 @@
     3. Generate chords
         1. Major triad: Type "maj_triad" followed by the first degree in the chord
             Example: maj_triad C#
+        
+        2. Minor triad: Type "min_triad" followed by the first degree in the chord
+            Example: min_triad C#
 
     4. Find the nth degree of a scale
         Type deg followed by the scale name (ex: maj or nat_min), the degree of

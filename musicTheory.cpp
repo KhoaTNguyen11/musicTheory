@@ -31,6 +31,15 @@ vector<string> musicTheory::gen_maj_triad(string tonic) {
 	return maj_chord;
 }
 
+vector<string> musicTheory::gen_min_triad(string tonic) {
+	int index = find_note(tonic, notes);
+	vector<string> min_chord;
+	min_chord.push_back(tonic);
+	min_chord.push_back(notes[(index+3)%12]);
+	min_chord.push_back(notes[(index+7)%12]);
+	return min_chord;
+}
+
 vector<string> musicTheory::gen_nat_min_scale(string tonic){
 	int index = find_note(tonic, notes);
 	vector<string> nat_min_scale;
@@ -103,7 +112,13 @@ void musicTheory::query() {
 			cout << "the notes in " << input << " major triad are: ";
 			for (auto &x : scale) {
 				cout << x << " ";
-				cout << endl;
+			}
+		} else if (input == "min_triad") {
+			cin >> input;
+			vector<string> scale = gen_min_triad(input);
+			cout << "the notes in " << input << " minor triad are: ";
+			for (auto &x : scale) {
+				cout << x << " ";
 			}
 		} else if (input == "deg") {
 			string scale_name, tonic;
@@ -120,6 +135,7 @@ void musicTheory::query() {
 		} else if (input == "quit") {
 			return;
 		}
+		cout << endl;
 		cout << "query? ";
 	}
 }
