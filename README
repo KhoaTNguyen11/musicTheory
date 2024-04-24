@@ -1,0 +1,33 @@
+1. Notice for users of the musicTheory program: 
+    1. The program currently does not support flats "b", only sharps "#". Thus,
+    when inputing notes into the program, please only use "#" (for example: 
+    G# instead of Ab). 
+
+2. To build the program:
+    In the directory called "musicTheory", run "make", then run "./music". 
+    A query prompt should appear ("query?") and you can start prompting the
+    program.
+
+3. Current functionality supported (will be added in the future): 
+    1. Generate scales from a note (the tonic)
+        1. Major scale: to generate a major scale, type "maj_scale" followed
+        by the tonic note of the scale you want to generate. 
+            Example: maj_scale C#
+
+        2. Natural Minor scale: to generate a minor scale, type "nat_min_scale" followed by the tonic note of the scale you want to generate. 
+            Example: nat_min_scale C#
+
+    2. Calculate the interval between two notes in semitones
+        Type "interval" followed by the lower note, then the higher note. 
+            Example: interval C B
+
+    3. Generate chords
+        1. Major triad: Type "maj_triad" followed by the first degree in the chord
+            Example: maj_triad C#
+
+    4. Find the nth degree of a scale
+        Type deg followed by the scale name (ex: maj or nat_min), the degree of
+        the scale you want to find, and the tonic of the scale. 
+            Example: deg maj 3 C# to find the 3rd degree of the C# major scale
+                     deg nat_min 4 D to find the 4th degree of the D natural 
+                     minor scale. 
